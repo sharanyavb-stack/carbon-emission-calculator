@@ -203,9 +203,9 @@ return (
             <TableHead>
                 <TableRow>
                     <TableCell>Material</TableCell>
-                    <TableCell>Carbon Emission factor</TableCell>
-                    <TableCell>Volume(m<sup>3</sup>) / Quantity (ton)</TableCell>
-                    <TableCell>Carbon Emission</TableCell>
+                    <TableCell>Carbon Emission factor (tCO<sub>2</sub>/unit)</TableCell>
+                    <TableCell>Volume (m<sup>3</sup>) / Quantity (ton)</TableCell>
+                    <TableCell>Carbon Emission (Tons)</TableCell>
                     <TableCell>Action</TableCell>
                 </TableRow>
             </TableHead>
@@ -255,7 +255,7 @@ return (
                                 </ToggleButtonGroup>
 						</TableCell>
                         <TableCell>
-						    {row.ce} {row.amount  === 'volume'? 'm³' : 'ton'}
+						    {row.ce}
 						</TableCell>
 					</>
 					) : (
@@ -270,10 +270,7 @@ return (
 						{row.quantity}
 						</TableCell>
                         <TableCell component="th" scope="row">
-						{row.ce} {row.amount  === 'volume'? 
-                            'm³'
-                         : ('ton')
-                         }
+						{row.ce}
 						</TableCell>
 					</>
 					)}
